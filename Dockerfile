@@ -8,3 +8,6 @@ ENV HOME="/root"
 ENV PATH="${HOME}/.cargo/bin:${PATH}"
 
 RUN cargo install firecrawl-local
+RUN cargo eza
+
+RUN eza -l ~/.cargo/bin

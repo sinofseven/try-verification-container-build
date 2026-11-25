@@ -5,4 +5,4 @@ RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --pr
 ENV HOME="/root"
 ENV PATH="${HOME}/.cargo/bin:${PATH}"
 
-RUN cargo --version
+RUN cargo install firecrawl-local

@@ -1,3 +1,5 @@
-FROM public.ecr.aws/lambda/provided:al2023 as compile
+FROM public.ecr.aws/lambda/provided:al2023
 
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal
+
+RUN echo ":$HOME:"

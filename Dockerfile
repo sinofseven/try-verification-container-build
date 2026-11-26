@@ -12,3 +12,5 @@ RUN cargo install firecrawl-local
 FROM public.ecr.aws/lambda/provided:al2023
 
 COPY --from=build /root/.cargo/bin/firecrawl-local /usr/local/bin/firecrawl-local
+COPY bootstrap /var/runtime/bootstrap
+RUN chmod 755 /var/runtime/bootstrap
